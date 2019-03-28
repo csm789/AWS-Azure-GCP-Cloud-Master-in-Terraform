@@ -18,6 +18,7 @@ provider "aws" {
   secret_key = "${var.aws_secret_key}"
   region     = "us-east-1"
   ====================================
+  These are the four ways to Password Credentials
   1) Creating IAM user and password through provider.tf
   2) Creating IAM user and password through Environment variables
   3) Attach Admin roles to the user
