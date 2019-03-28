@@ -17,6 +17,11 @@ provider "aws" {
   access_key = "${var.aws_access_key}"
   secret_key = "${var.aws_secret_key}"
   region     = "us-east-1"
+  ====================================
+  1) Creating IAM user and password through provider.tf
+  2) Creating IAM user and password through Environment variables
+  3) Attach Admin roles to the user
+  4) Storing it under ~/.aws/
 }
 
 # Create a web server
