@@ -12,19 +12,27 @@ resource "aws_instance" "Sample_instance" {
 }
 
 /*
-{
-Below is a sample provider.tf file
-NOTE : You need Provider.tf to replace access_key and secret_key with generated values
-
-provider "aws" {
-  access_key = "AGHKJHLKJHLH23"
-  secret_key = "DJLDDGGHH"
-  region     = "us-east-1"
-}
   ==============================================================================
   These are the four ways to Password Credentials:
   1) Creating IAM user and password through provider.tf
+  {
+  Below is a sample provider.tf file
+  NOTE : You need Provider.tf to replace access_key and secret_key with generated values
+
+  provider "aws" {
+    access_key = "AGHKJHLKJHLH23"
+    secret_key = "DJLDDGGHH"
+    region     = "us-east-1"
+  }
+  ==============================================================================
   2) Creating IAM user and password through Environment variables
+FOLLOW THREE STEPS:
+-> export AWS_ACCESS_KEY_ID="AGHKJHLKJHLH23"
+-> export AWS_SECRET_ACCESS_KEY="AGHKJHLKJHLH23"
+-> env | grep -i aws
+-> terraform plan
+-> terraform apply
+  ==============================================================================
   3) Attach Admin roles to the user
   4) Storing it under ~/.aws/
 ================================================================================
