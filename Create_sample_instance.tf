@@ -12,7 +12,7 @@ resource "aws_instance" "Sample_instance" {
 }
 
 /*
-  ==============================================================================
+
   These are the four ways to Password Credentials:
   1) Creating IAM user and password through provider.tf
   {
@@ -22,7 +22,7 @@ resource "aws_instance" "Sample_instance" {
   provider "aws" {
     access_key = "AGHKJHLKJHLH23"
     secret_key = "DJLDDGGHH"
-    region     = "us-east-1"
+    region     = "us-east-2"
   }
   ==============================================================================
   2) Creating IAM user and password through Environment variables
