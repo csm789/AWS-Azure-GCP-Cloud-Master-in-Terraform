@@ -1,5 +1,0 @@
-# Variables
-
-variables "amitype" {
-
-}
