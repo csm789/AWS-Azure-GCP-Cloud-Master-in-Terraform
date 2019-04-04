@@ -1,0 +1,56 @@
+Map variables 2 - CODE
+You need three files - variables.tf , main.tf and provider.tf. Please create those and add below contents
+NOTE :  region must be us-east-2
+
+variables.tf contents:
+
+variable "env" {}
+
+variable "region" {
+default = "us-east-2"
+}
+
+variable "ami_type" {
+
+default={
+
+type="map"
+
+us-east-1="ami-14c5486b"
+us-east-2="ami-922914f7"
+}
+}
+
+variable "instance_type" {
+
+type="map"
+
+default={
+
+dev = "t2.micro"
+
+test = "t2.medium"
+
+}
+}
+
+provider.tf contents : -- NOTE : replace with your credentials
+provider "aws" {
+  access_key = "AGHKJHLKJHLH23"
+  secret_key = "DJLDDGGHH"
+  region     = "us-east-2"
+}
+main.tf contents :
+
+resource "aws_instance" "firstdemo" {
+
+ami = "${lookup(var.ami_type,var.region)}"
+instance_type="${lookup(var.instance_type,var.env)}"
+
+tags {
+
+    Name = "demoinstance"
+
+   }
+
+}
