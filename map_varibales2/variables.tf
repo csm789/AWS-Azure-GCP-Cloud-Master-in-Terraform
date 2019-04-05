@@ -5,21 +5,16 @@ us-east-1="ami-14c5486b"
 us-east-2="ami-922914f7"
 }
 }
-variable "env" {}
 
+variable "env" {}
 variable "region" {
 default = "us-east-2"
 }
 
 variable "instance_type" {
-
 type="map"
-
 default={
-
 dev = "t2.micro"
-
 test = "t2.medium"
-
 }
 }
