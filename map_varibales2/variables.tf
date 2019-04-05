@@ -1,20 +1,19 @@
+variable "priya" {}
 variable "ami_type" {
 default={
 type="map"
-us-east-1="ami-14c5486b"
+us-east-1="ami-011b3ccf1bd6db744"
 us-east-2="ami-922914f7"
 }
 }
 
 variable "env" {}
-variable "region" {
-default = "us-east-2"
-}
-
+variable "region" {}
 variable "instance_type" {
+
 type="map"
 default={
-dev = "t2.micro"
-test = "t2.medium"
+ dev = "t2.micro"
+ sys = "t2.medium"
 }
 }

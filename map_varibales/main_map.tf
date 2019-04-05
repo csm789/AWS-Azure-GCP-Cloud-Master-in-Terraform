@@ -1,7 +1,7 @@
-resource "aws_instance" "env_project" {
-  ami = "${var.amitype}"
-instance_type = "${lookup(var.instance_type,var.env)}"
-tags{
-name = "Arvisat_DevOps_Project"
+resource "aws_instance" "main-project" {
+ami = "${lookup(var.bastion_amis,var.sathya)}"
+instance_type="${lookup(var.instance_type,var.env)}"
+tags {
+name = "Arvisat-DevOPs_project"
 }
 }
