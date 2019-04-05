@@ -1,8 +1,3 @@
-/* List variables - CODE
-You need three files - variables.tf , main.tf and provider.tf. Please create those and add below contents
-NOTE :You need to replace security group entries with the ones that exist in your account
-*/
-variable "env1" {}
 variable "ami_type" {
 type = "map"
 default = {
@@ -10,7 +5,7 @@ default = {
  us-east-2 = "ami-922914f7"
 }
 }
-variable "env2" {}
+variable "env" {}
 variable "region" {}
 variable "instance_type" {
  type = "map"
@@ -19,8 +14,7 @@ variable "instance_type" {
   sys = "t2.medium"
 }
 }
-variable "list" {}
-variable "sgs" {
+variable "AWS_SG_ohio_ALLINONE" {
  type = "list"
- default = [ "sg-1b015a5c", "sg-966d09f8"]
+ default = [ "sg-966d09f8", "sg-0451d3b89ee942bdc"]
 }
