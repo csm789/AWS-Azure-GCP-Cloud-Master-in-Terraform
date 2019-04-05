@@ -1,7 +1,7 @@
 variable "bastion_amis" {
   type = "map"
   default = {
-    us-east-1 = "ami-0080e4c5bc078760e"
+    us-east-1 = "ami-0565af6e282977273"
     us-east-2 = "ami-0cd3dfa4e37921605"
   }
 }
