@@ -2,4 +2,5 @@ Commands:
 terraform  graph
 
 Terraform Installation:
-apt install -y graphviz
+install -y graphviz
+* After Installation "terraform graph | dot -Tpng > graph.png"
